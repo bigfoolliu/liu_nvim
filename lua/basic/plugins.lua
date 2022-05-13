@@ -8,7 +8,6 @@ packer.startup(
         function()
             -- 包管理器
             use {"wbthomason/packer.nvim"}
-
             -- vim文档
             use {"yianwillis/vimcdoc"}
 
@@ -156,14 +155,6 @@ packer.startup(
                     require("conf.nvim-cmp")
                 end
             }
-
-            -- 扩展 LSP 诊断
-            -- use {
-            --     "mfussenegger/nvim-lint",
-            --     config = function()
-            --         require("conf.nvim-lint")
-            --     end
-            -- }
 
         end,
         -- 使用浮动窗口
