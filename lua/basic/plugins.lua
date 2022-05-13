@@ -49,9 +49,91 @@ packer.startup(
                     "famiu/bufdelete.nvim"
                 },
                 config = function()
-                require("conf.bufferline")
+                   require("conf.bufferline")
                 end
             }
+
+            -- 搜索时显示条目
+            use {
+                "kevinhwang91/nvim-hlslens",
+                config = function()
+                    require("conf.nvim-hlslens")
+                end
+            }
+
+            -- 自动匹配括号
+            use {
+                "windwp/nvim-autopairs",
+                config = function()
+                    require("conf.nvim-autopairs")
+                end
+            }
+
+            -- 快速更改单词
+            use {
+                "AndrewRadev/switch.vim",
+                config = function()
+                    require("conf.switch")
+                end
+            }
+
+            -- 快速跳转
+            use {
+                "phaazon/hop.nvim",
+                config = function()
+                    require("conf.hop")
+                end
+            }
+
+            -- 自动保存
+            use {
+                "Pocco81/AutoSave.nvim",
+                config = function()
+                    require("conf.AutoSave")
+                end
+            }
+
+            -- 自动会话管理,直接输入 nvim 不带任何文件路径启动，将自动恢复上次会话状态
+            -- 如果输入nvim 后面有文件路径就不会恢复上次的会话状态，这种情况下可以通过输入命令：RestoreSession 来恢复上次的会话状态
+            use {
+                "rmagatti/auto-session",
+                config = function()
+                    require("conf.auto-session")
+                end
+            }
+
+            -- 显示网页色
+            use {
+                "norcalli/nvim-colorizer.lua",
+                config = function()
+                    require("conf.nvim-colorizer")
+                end
+            }
+
+            -- LSP 基础服务
+            use {
+                "neovim/nvim-lspconfig",
+                config = function()
+                    require("conf.nvim-lspconfig")
+                end
+            }
+
+            -- 自动安装 LSP
+            use {
+                "williamboman/nvim-lsp-installer",
+                config = function()
+                    require("conf.nvim-lsp-installer")
+                end
+            }
+
+            -- LSP UI 美化
+            use {
+                "tami5/lspsaga.nvim",
+                config = function()
+                    require("conf.lspsaga")
+                end
+            }
+
         end,
         -- 使用浮动窗口
         config = {

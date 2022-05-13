@@ -1,6 +1,10 @@
+-- 暂时不使用
 -- https://github.com/catppuccin/nvim
 
-require("catppuccin").setup(
+local catppuccin = require("catppuccin")
+
+-- require("catppuccin").setup(
+catppuccin.setup(
     {
         -- 透明背景
         transparent_background = false,
