@@ -41,3 +41,12 @@ vim.keybinds.gmap("n", "<ESC>", ":nohlsearch<CR>", vim.keybinds.opts)
 -- 通过 leader cs 切换拼写检查
 vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
+
+-------------------------------------------------------------
+-- 通用设置
+-------------------------------------------------------------
+
+-- ,w来保存文件
+vim.keybinds.gmap("n", "<leader>w", ":w!<CR>", vim.keybinds.opts)
+-- ,q退出文件
+vim.keybinds.gmap("n", "<leader>q", ":q<CR>", vim.keybinds.opts)
