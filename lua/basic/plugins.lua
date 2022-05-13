@@ -46,6 +46,15 @@ packer.startup(
                 end
             }
 
+            -- 状态栏
+            use {
+                'nvim-lualine/lualine.nvim',
+                requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+                config = function()
+                    require("conf.lualine")
+                end
+            }
+
             -- 搜索时显示条目
             use {
                 "kevinhwang91/nvim-hlslens",
