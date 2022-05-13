@@ -1,4 +1,4 @@
--- 加载配置项  
+-- 加载配置项
 require("basic.settings")
 require("basic.keybinds")
 require("basic.config")
