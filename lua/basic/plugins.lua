@@ -7,14 +7,10 @@ packer.startup(
         -- 所有插件的安装都书写在 function 中
         function()
             -- 包管理器
-            use {
-                "wbthomason/packer.nvim"
-            }
+            use {"wbthomason/packer.nvim"}
 
             -- vim文档
-            use {
-                "yianwillis/vimcdoc"
-            }
+            use {"yianwillis/vimcdoc"}
 
             -- nvim-tree文档树
             use {
@@ -32,7 +28,6 @@ packer.startup(
             -- 优秀的暗色主题
             use {
                 "catppuccin/nvim",
-                -- 改个别名，因为它的名字是 nvim，可能会冲突
                 as = "catppuccin",
                 config = function()
                     -- 插件加载完成后自动运行 lua/conf/catppuccin.lua 文件中的代码
@@ -43,7 +38,6 @@ packer.startup(
             -- 支持 LSP 状态的 buffer 栏
             use {
                 "akinsho/bufferline.nvim",
-
                 -- 删除 buffer 时不影响现有布局
                 requires = {
                     "famiu/bufdelete.nvim"
@@ -153,7 +147,6 @@ vim.cmd(
   augroup end
 ]]
 )
-
 
 
 -- packer配置示例介绍
