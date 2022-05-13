@@ -1,5 +1,6 @@
 -- https://github.com/AndrewRadev/switch.vim
 -- NOTE: switch 手动定义需要增加的反意单词
+
 local switch_words = {
     {"true", "false"},
     {"on", "off"},
@@ -23,8 +24,9 @@ for _, value in ipairs(switch_words) do
     w2, _ = string.gsub(w2, "^%l", string.upper)
     table.insert(push_words, {w1, w2})
 end
+
 -- 放入全局变量
 vim.g.switch_custom_definitions = push_words
+
 -- 快速取反意单词，如 true 变为 false
 vim.keybinds.gmap("n", "gs", ":Switch<CR>", vim.keybinds.opts)
-

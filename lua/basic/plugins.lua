@@ -34,6 +34,14 @@ packer.startup(
                 end
             }
 
+            -- onedark主题
+            -- use { 
+            --     "navarasu/onedark.nvim",
+            --     config = function()
+            --         require("conf.onedark")
+            --     end
+            -- }
+
             -- 支持 LSP 状态的 buffer 栏
             use {
                 "akinsho/bufferline.nvim",
@@ -184,6 +192,11 @@ vim.cmd(
   augroup end
 ]]
 )
+
+
+-- 应用主题
+vim.cmd([[colorscheme catppuccin]])
+-- vim.cmd([[colorscheme onedark]])
 
 
 -- packer配置示例介绍

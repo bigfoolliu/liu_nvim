@@ -1,4 +1,3 @@
--- 暂时不使用
 -- https://github.com/catppuccin/nvim
 
 require("catppuccin").setup(
@@ -9,7 +8,7 @@ require("catppuccin").setup(
         term_color = false,
         -- 代码样式
         styles = {
-            -- comments = "italic",
+            comments = "NONE",
             functions = "NONE",
             keywords = "NONE",
             strings = "NONE",
@@ -58,7 +57,4 @@ require("catppuccin").setup(
         }
     }
 )
-
--- 应用主题
-vim.cmd([[colorscheme catppuccin]])
 
