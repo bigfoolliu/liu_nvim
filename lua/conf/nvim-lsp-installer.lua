@@ -21,6 +21,7 @@ local servers = {
     -- sqls = require("lsp.sqls"),
     -- vuels = require("lsp.vuels")
 }
+
 -- 这里是 LSP 服务启动后的按键加载
 local function attach(_, bufnr)
     -- 跳转到定义（代替内置 LSP 的窗口，telescope 插件让跳转定义更方便）
@@ -56,6 +57,7 @@ local function attach(_, bufnr)
         vim.keybinds.opts
     )
 end
+
 -- 自动安装或启动 LanguageServers
 for server_name, server_options in pairs(servers) do
     local server_available, server = lsp_installer_servers.get_server(server_name)

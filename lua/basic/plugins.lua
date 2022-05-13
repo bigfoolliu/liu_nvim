@@ -157,6 +157,14 @@ packer.startup(
                 end
             }
 
+            -- 扩展 LSP 诊断
+            -- use {
+            --     "mfussenegger/nvim-lint",
+            --     config = function()
+            --         require("conf.nvim-lint")
+            --     end
+            -- }
+
         end,
         -- 使用浮动窗口
         config = {
