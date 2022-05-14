@@ -1,5 +1,6 @@
+-- onedark主题
+
 -- https://github.com/navarasu/onedark.nvim
--- Lua
 
 require('onedark').setup{
     -- Main options --

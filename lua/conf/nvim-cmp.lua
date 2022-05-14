@@ -1,3 +1,5 @@
+-- 补全
+
 -- https://github.com/hrsh7th/nvim-cmp
 -- https://github.com/hrsh7th/vim-vsnip
 -- https://github.com/hrsh7th/cmp-vsnip
@@ -15,6 +17,7 @@
 -- 等字样时，需要手动执行（仅限 Manjaro）：
 --    rm ~/.local/share/nvim/plugged/cmp-tabnine/binaries
 --    ~/.local/share/nvim/plugged/cmp-tabnine/install.sh
+
 local lspkind = require("lspkind")
 local cmp = require("cmp")
 cmp.setup(
@@ -27,6 +30,7 @@ cmp.setup(
                 vim.fn["vsnip#anonymous"](args.body)
             end
         },
+
         -- 指定补全源（安装了补全源插件就在这里指定）
         sources = cmp.config.sources(
             {
@@ -39,6 +43,7 @@ cmp.setup(
                 {name = "cmp_tabnine"}
             }
         ),
+
         -- 格式化补全菜单
         formatting = {
             format = lspkind.cmp_format(
@@ -52,6 +57,7 @@ cmp.setup(
                 }
             )
         },
+
         -- 对补全建议排序
         sorting = {
             comparators = {
@@ -67,14 +73,18 @@ cmp.setup(
                 cmp.config.compare.order
             }
         },
+
         -- 绑定补全相关的按键
         mapping = {
             -- 上一个
             ["<C-p>"] = cmp.mapping.select_prev_item(),
+
             -- 下一个
             ["<C-n>"] = cmp.mapping.select_next_item(),
+
             -- 选择补全
             ["<CR>"] = cmp.mapping.confirm(),
+
             --  出现或关闭补全
             ["<C-k>"] = cmp.mapping(
                 {
@@ -113,6 +123,7 @@ cmp.setup(
         }
     }
 )
+
 -- 命令行 / 模式提示
 cmp.setup.cmdline(
     "/",
@@ -122,6 +133,7 @@ cmp.setup.cmdline(
         }
     }
 )
+
 -- 命令行 : 模式提示
 cmp.setup.cmdline(
     ":",

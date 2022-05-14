@@ -1,11 +1,15 @@
+-- 主题配置
+
 -- https://github.com/catppuccin/nvim
 
 require("catppuccin").setup(
     {
         -- 透明背景
         transparent_background = false,
+
         -- 使用终端背景色
         term_color = false,
+
         -- 代码样式
         styles = {
             comments = "NONE",
@@ -14,6 +18,7 @@ require("catppuccin").setup(
             strings = "NONE",
             variables = "NONE"
         },
+
         -- 为不同的插件统一样式风格
         -- 尽管这里有一些插件还没有安装，但是先将它们
         -- 设置为 true 并不影响

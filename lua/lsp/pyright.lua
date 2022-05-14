@@ -1,3 +1,5 @@
+-- python lsp配置
+
 return {
     root_dir = function()
         return vim.fn.getcwd()

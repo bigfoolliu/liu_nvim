@@ -1,3 +1,5 @@
+-- lsp
+
 -- https://github.com/neovim/nvim-lspconfig
 -- 更多样式定制，参见：https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization
 -- 诊断样式定制

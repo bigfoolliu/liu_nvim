@@ -1,3 +1,5 @@
+-- lsp
+
 -- https://github.com/tami5/lspsaga.nvim
 require("lspsaga").setup(
     {
@@ -8,6 +10,7 @@ require("lspsaga").setup(
         hint_sign = " ",
         infor_sign = " ",
         diagnostic_header_icon = " ",
+
         -- 正在写入的行提示
         code_action_icon = " ",
         code_action_prompt = {
@@ -18,6 +21,7 @@ require("lspsaga").setup(
             sign_priority = 40,
             virtual_text = true
         },
+
         -- 快捷键配置
         code_action_keys = {
             quit = "<Esc>",

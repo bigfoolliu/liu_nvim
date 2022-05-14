@@ -1,3 +1,5 @@
+-- 状态栏配置
+
 -- https://github.com/nvim-lualine/lualine.nvim
 -- 可选的主题: https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
 
