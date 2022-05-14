@@ -1,3 +1,11 @@
+-- 文件介绍:
+-- 本文件存放键位绑定的文件
+
+
+----------------------------------------------------------------------------------------
+-- 通用设置
+----------------------------------------------------------------------------------------
+
 -- leader 键 默认设置为空格,修改为,
 vim.g.mapleader = ","
 
@@ -10,24 +18,24 @@ vim.keybinds = {
     opts = {noremap = true, silent = true}
 }
 
--- 插入模下 jj 退出插入模式
-vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)
+
+----------------------------------------------------------------------------------------
+-- normal模式
+----------------------------------------------------------------------------------------
+
+-- ,w来保存文件
+vim.keybinds.gmap("n", "<leader>w", ":w!<CR>", vim.keybinds.opts)
+
+-- ,q退出文件
+vim.keybinds.gmap("n", "<leader>q", ":wq<CR>", vim.keybinds.opts)
 
 -- 用 H 和 L 代替 ^ 与 $
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)
-vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
 vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
-vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
 
 -- 将 C-u 和 C-d 调整为上下滑动 10 行而不是半页
 vim.keybinds.gmap("n", "<C-u>", "10k", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-d>", "10j", vim.keybinds.opts)
-
--- 插入模式下的上下左右移动
-vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
 
 -- 修改分屏大小
 vim.keybinds.gmap("n", "<C-up>", "<cmd>res +1<CR>", vim.keybinds.opts)
@@ -42,11 +50,33 @@ vim.keybinds.gmap("n", "<ESC>", ":nohlsearch<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 
--------------------------------------------------------------
--- 通用设置
--------------------------------------------------------------
+----------------------------------------------------------------------------------------
+-- 插入模式
+----------------------------------------------------------------------------------------
 
--- ,w来保存文件
-vim.keybinds.gmap("n", "<leader>w", ":w!<CR>", vim.keybinds.opts)
--- ,q退出文件
-vim.keybinds.gmap("n", "<leader>q", ":q<CR>", vim.keybinds.opts)
+-- 插入模下 jj 退出插入模式
+vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)
+
+-- 插入模式下的上下左右移动
+vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
+
+
+
+----------------------------------------------------------------------------------------
+-- 可视模式
+----------------------------------------------------------------------------------------
+
+-- 用 H 和 L 代替 ^ 与 $
+vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
+vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
+
+
+
+----------------------------------------------------------------------------------------
+-- 命令模式
+----------------------------------------------------------------------------------------
+
+
