@@ -32,6 +32,13 @@ vim.keybinds.gmap("n", "<leader>q", ":quitall<CR>", vim.keybinds.opts)
 -- 使用空格来搜索文件
 vim.keybinds.gmap("n", "<Space>", "/", vim.keybinds.opts)
 
+-- 使用oo来在当前行的下一行插入一行
+vim.keybinds.gmap("n", "oo", "o<ESC>", vim.keybinds.opts)
+
+-- 使用OO来在当前行的上一行插入一行
+vim.keybinds.gmap("n", "OO", "O<ESC>", vim.keybinds.opts)
+
+
 -- 到行首和行尾, 用 H 和 L 代替 ^ 与 $
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)
 vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
@@ -141,6 +148,27 @@ vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.o
 
 -- 快速取反意单词，如 true 变为 false
 vim.keybinds.gmap("n", "gs", ":Switch<CR>", vim.keybinds.opts)
+
+
+-----------------------------------
+-- 由插件telescope提供
+
+-- ctrl + c: 退出搜索
+-- ctrl + n: 下一个
+-- <CR>	Confirm selection
+-- <C-x>	Go to file selection as a split
+-- <C-v>	Go to file selection as a vsplit
+-- <C-t>	Go to a file in a new tab
+-- ?	Show mappings for picker actions (normal mode)
+-- <C-c>	Close telescope
+-- <Esc>	Close telescope (in normal mode)
+-- <Tab>	Toggle selection and move to next selection
+
+-- 在当前的目录快速查找文件,ff
+vim.keybinds.gmap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", vim.keybinds.opts)
 
 
 ----------------------------------------------------------------------------------------

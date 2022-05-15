@@ -12,6 +12,20 @@ packer.startup(
             -- vim文档
             use {"yianwillis/vimcdoc"}
 
+            -- 提供一个开始界面,可以展示mru以及标签过的文件
+            use {
+                "mhinz/vim-startify",
+                config = function()
+                    require("conf.startify")
+                end
+            }
+
+            -- 全局文件搜索
+            use {
+                'nvim-telescope/telescope.nvim',
+                requires = { {'nvim-lua/plenary.nvim'} }
+            }
+
             -- nvim-tree文档树
             use {
                "kyazdani42/nvim-tree.lua",
@@ -49,7 +63,7 @@ packer.startup(
                 -- 删除 buffer 时不影响现有布局
                 requires = {
                     "famiu/bufdelete.nvim"
-                },
+               },
                 config = function()
                    require("conf.bufferline")
                 end
@@ -114,12 +128,12 @@ packer.startup(
 
             -- 自动会话管理,直接输入 nvim 不带任何文件路径启动，将自动恢复上次会话状态
             -- 如果输入nvim 后面有文件路径就不会恢复上次的会话状态，这种情况下可以通过输入命令：RestoreSession 来恢复上次的会话状态
-            use {
-                "rmagatti/auto-session",
-                config = function()
-                    require("conf.auto-session")
-                end
-            }
+            -- use {
+            --     "rmagatti/auto-session",
+            --     config = function()
+            --         require("conf.auto-session")
+            --     end
+            -- }
 
             -- 显示网页色
             use {
