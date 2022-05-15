@@ -80,6 +80,14 @@ packer.startup(
                 end
             }
 
+            -- 将文本块用括号包围
+            use {
+                "ur4ltz/surround.nvim",
+                config = function()
+                    require("conf.surround")
+                end
+            }
+
             -- 快速更改单词
             use {
                 "AndrewRadev/switch.vim",
