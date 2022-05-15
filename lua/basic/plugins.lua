@@ -121,6 +121,11 @@ packer.startup(
                 end
             }
 
+            -- 显示git的展示情况
+            use {
+                "airblade/vim-gitgutter"
+            }
+
             -- LSP 基础服务
             use {
                 "neovim/nvim-lspconfig",

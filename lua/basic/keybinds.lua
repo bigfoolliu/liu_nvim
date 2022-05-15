@@ -26,8 +26,11 @@ vim.keybinds = {
 -- ,w来保存文件
 vim.keybinds.gmap("n", "<leader>w", ":w!<CR>", vim.keybinds.opts)
 
--- ,q退出文件
-vim.keybinds.gmap("n", "<leader>q", ":wq<CR>", vim.keybinds.opts)
+-- ,q退出文件,退出vim
+vim.keybinds.gmap("n", "<leader>q", ":quitall<CR>", vim.keybinds.opts)
+
+-- 使用空格来搜索文件
+vim.keybinds.gmap("n", "<Space>", "/", vim.keybinds.opts)
 
 -- 到行首和行尾, 用 H 和 L 代替 ^ 与 $
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)
@@ -98,12 +101,14 @@ vim.keybinds.gmap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", vim.ke
 
 -- 光标在tree中的时候,默认按键
 -- o     ：打开目录或文件
+
 -- a     ：新增目录或文件
 -- r     ：重命名目录或文件
 -- x     ：剪切目录或文件
 -- c     ：复制目录或文件
 -- d     ：删除目录或文件
 -- y     ：复制目录或文件名称
+
 -- Y     ：复制目录或文件相对路径
 -- gy    ：复制目录或文件绝对路径
 -- p     ：粘贴目录或文件

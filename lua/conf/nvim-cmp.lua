@@ -20,6 +20,7 @@
 
 local lspkind = require("lspkind")
 local cmp = require("cmp")
+
 cmp.setup(
     ---@diagnostic disable-next-line: redundant-parameter
     {
@@ -77,10 +78,12 @@ cmp.setup(
         -- 绑定补全相关的按键
         mapping = {
             -- 上一个
-            ["<C-p>"] = cmp.mapping.select_prev_item(),
+            -- ["<C-p>"] = cmp.mapping.select_prev_item(),
+            ["<Up>"] = cmp.mapping.select_prev_item(),
 
             -- 下一个
-            ["<C-n>"] = cmp.mapping.select_next_item(),
+            -- ["<C-n>"] = cmp.mapping.select_next_item(),
+            ["<Down>"] = cmp.mapping.select_next_item(),
 
             -- 选择补全
             ["<CR>"] = cmp.mapping.confirm(),
@@ -104,6 +107,7 @@ cmp.setup(
                     end
                 }
             ),
+
             -- 类似于 IDEA 的功能，如果没进入选择框，tab
             -- 会选择下一个，如果进入了选择框，tab 会确认当前选择
             ["<Tab>"] = cmp.mapping(
