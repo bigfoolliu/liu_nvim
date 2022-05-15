@@ -7,6 +7,7 @@
 - 参考文章: [知乎:neovim IDE 搭建系列](https://www.zhihu.com/column/c_1501743718332153856)
 - [neovim官方帮助文档](https://neovim.io/doc/user/)
 - [参考github](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
+- [Neovim: 把 init.vim 迁移到 init.lua](https://zhuanlan.zhihu.com/p/467939053)
 
 ## 2.目录说明
 

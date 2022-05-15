@@ -19,6 +19,16 @@ vim.keybinds = {
 }
 
 
+
+-- 日期缩写
+-- 不能使用的lua配置仍然使用viml
+vim.cmd([[
+iab xdate <C-r>=strftime("20%y/%m/%d")<cr>
+iab xdatetime <C-r>=strftime("20%y/%m/%d %H:%M:%S")<cr>
+iab xtime <C-r>=strftime("%H:%M:%S")<cr>
+]]
+)
+
 ----------------------------------------------------------------------------------------
 -- normal模式
 ----------------------------------------------------------------------------------------
@@ -93,7 +103,6 @@ vim.keybinds.gmap("n", "<leader>hl", "<cmd>HopLine<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 
 
-
 -------------------------------
 -- 由 nvim-hlslens 插件提供
 
@@ -101,6 +110,12 @@ vim.keybinds.gmap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", vim.keyb
 vim.keybinds.gmap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+
+
+-------------------------------
+-- 由 todo-comments 插件提供
+-- 查找 TODO 标签,ft
+vim.keybinds.gmap("n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<CR>", vim.keybinds.opts)
 
 
 -------------------------------
@@ -138,6 +153,9 @@ vim.g.nvim_tree_add_trailing = 1
 
 -- 按 leader 1 打开/关闭文件树
 vim.keybinds.gmap("n", "<leader>1", "<cmd>NvimTreeToggle<CR>", vim.keybinds.opts)
+
+-- 按 alt + h/j/k/l 来切换窗口
+-- vim.keybinds.gmap("n", "<C-S>h", "<C-w>h", vim.keybinds.opts)
 
 -- 按 leader fc 在文件树中找到当前以打开文件的位置,此时不必
 vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.opts)

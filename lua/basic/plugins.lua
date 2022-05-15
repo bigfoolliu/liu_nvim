@@ -26,6 +26,22 @@ packer.startup(
                 requires = { {'nvim-lua/plenary.nvim'} }
             }
 
+            -- 打开之前的文件的时候回到光标的位置
+            use {
+                "ethanholz/nvim-lastplace",
+                config = function()
+                    require("conf.nvim-lastplace")
+                end
+            }
+
+            -- todo tree
+            use {
+                "folke/todo-comments.nvim",
+                config = function()
+                    require("conf.todo-comments")
+                end
+            }
+
             -- nvim-tree文档树
             use {
                "kyazdani42/nvim-tree.lua",
