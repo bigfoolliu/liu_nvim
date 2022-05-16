@@ -23,9 +23,9 @@ vim.keybinds = {
 -- 日期缩写
 -- 不能使用的lua配置仍然使用viml
 vim.cmd([[
-iab xdate <C-r>=strftime("20%y/%m/%d")<cr>
-iab xdatetime <C-r>=strftime("20%y/%m/%d %H:%M:%S")<cr>
-iab xtime <C-r>=strftime("%H:%M:%S")<cr>
+    iab xdate <C-r>=strftime("20%y/%m/%d")<cr>
+    iab xdatetime <C-r>=strftime("20%y/%m/%d %H:%M:%S")<cr>
+    iab xtime <C-r>=strftime("%H:%M:%S")<cr>
 ]]
 )
 

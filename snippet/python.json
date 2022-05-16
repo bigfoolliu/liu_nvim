@@ -1,0 +1,11 @@
+{
+  "print liu": {
+    "prefix": "liu",
+    "body": [
+      "#!/usr/bin/env python3",
+      "# -*- coding:utf-8 -*-",
+      "# author: bigfoolliu"
+    ],
+    "description": "输入python头"
+  }
+}

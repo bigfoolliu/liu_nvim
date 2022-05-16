@@ -35,13 +35,13 @@ cmp.setup(
         -- 指定补全源（安装了补全源插件就在这里指定）
         sources = cmp.config.sources(
             {
-                {name = "vsnip"},
+                {name = "vsnip"},  -- 提示代码片段
                 {name = "nvim_lsp"},
-                {name = "path"},
-                {name = "buffer"},
+                {name = "path"},  -- 提示路径
+                {name = "buffer"},  -- 提示buffer
                 {name = "cmdline"},
-                {name = "spell"},
-                {name = "cmp_tabnine"}
+                {name = "spell"},  -- 提示拼写
+                {name = "cmp_tabnine"}  -- AI提示
             }
         ),
 
@@ -78,18 +78,19 @@ cmp.setup(
         -- 绑定补全相关的按键
         mapping = {
             -- 上一个
-            -- ["<C-p>"] = cmp.mapping.select_prev_item(),
-            ["<Up>"] = cmp.mapping.select_prev_item(),
+            ["<C-k>"] = cmp.mapping.select_prev_item(),
+            -- ["<Up>"] = cmp.mapping.select_prev_item(),
 
             -- 下一个
-            -- ["<C-n>"] = cmp.mapping.select_next_item(),
-            ["<Down>"] = cmp.mapping.select_next_item(),
+            ["<C-j>"] = cmp.mapping.select_next_item(),
+            -- ["<Down>"] = cmp.mapping.select_next_item(),
 
             -- 选择补全
             ["<CR>"] = cmp.mapping.confirm(),
 
             --  出现或关闭补全
-            ["<C-k>"] = cmp.mapping(
+            -- ["<C-k>"] = cmp.mapping(
+            ["<C-p>"] = cmp.mapping(
                 {
                     i = function()
                         if cmp.visible() then

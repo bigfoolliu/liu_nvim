@@ -8,6 +8,7 @@
 - [neovim官方帮助文档](https://neovim.io/doc/user/)
 - [参考github](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
 - [Neovim: 把 init.vim 迁移到 init.lua](https://zhuanlan.zhihu.com/p/467939053)
+- [打造neovim像ide一样:有炫酷的ui](https://github.com/NvChad/NvChad)
 
 ## 2.目录说明
 

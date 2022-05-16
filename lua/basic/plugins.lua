@@ -197,6 +197,7 @@ packer.startup(
             }
 
             -- 自动代码补全系列插件
+            -- 退出重进 neovim，然后打开一个指定类型的文件，命令行输入：:VsnipOpen, 即可新增用户对应类型文件的代码片段了
             use {
                 "hrsh7th/nvim-cmp",  -- 代码补全核心插件，下面都是增强补全的体验插件
                 requires = {
