@@ -11,7 +11,11 @@
 - [Neovim: 把 init.vim 迁移到 init.lua](https://zhuanlan.zhihu.com/p/467939053)
 - [打造neovim像ide一样:有炫酷的ui](https://github.com/NvChad/NvChad)
 
-## 2.目录说明
+## 2.安装使用
+
+参考==install.sh==
+
+## 3.目录说明
 
 相关的主要目录:
 
