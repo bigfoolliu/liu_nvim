@@ -4,7 +4,6 @@
 
 ----------------------------------------------------------------------------------------
 -- 通用设置
-----------------------------------------------------------------------------------------
 
 -- leader 键 默认设置为空格,修改为,
 vim.g.mapleader = ","
@@ -28,9 +27,34 @@ vim.cmd([[
 ]]
 )
 
+
+----------------------------------------------------------------------------------------
+-- 插入模式
+
+-- 插入模下 jj 退出插入模式
+vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)
+
+-- 插入模式下的上下左右移动
+vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
+
+
+----------------------------------------------------------------------------------------
+-- 可视模式
+
+-- 用 H 和 L 代替 ^ 与 $
+vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
+vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
+
+
+----------------------------------------------------------------------------------------
+-- 命令模式
+
+
 ----------------------------------------------------------------------------------------
 -- normal模式
-----------------------------------------------------------------------------------------
 
 -- ,w来保存文件
 vim.keybinds.gmap("n", "<leader>w", ":w!<CR>", vim.keybinds.opts)
@@ -47,12 +71,12 @@ vim.keybinds.gmap("n", "oo", "o<ESC>", vim.keybinds.opts)
 -- 使用OO来在当前行的上一行插入一行
 vim.keybinds.gmap("n", "OO", "O<ESC>", vim.keybinds.opts)
 
-
 -- 到行首和行尾, 用 H 和 L 代替 ^ 与 $
 vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)
 vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
 
 -- 将 C-u 和 C-d 调整为上下滑动 10 行而不是半页, ctrl + u/d
+-- 可以理解为ctrl + up/down加速记忆
 vim.keybinds.gmap("n", "<C-u>", "10k", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-d>", "10j", vim.keybinds.opts)
 
@@ -71,6 +95,7 @@ vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 -----------------------------
 -- 由 bufdelete 插件所提供的方法
+-- 控制buffer
 
 -- 关闭当前 buffer, ctrl + q
 vim.keybinds.gmap("n", "<C-q>", "<cmd>Bdelete!<CR>", vim.keybinds.opts)
@@ -91,6 +116,7 @@ vim.keybinds.gmap("n", "<leader>bl", "<cmd>BufferLineCloseRight<CR>", vim.keybin
 
 -------------------------------
 -- 由 hop 插件提供的方法
+-- 快速跳转到当前页面的某行,某个单词或者某个字符
 
 -- 搜索并跳转到单词,主要使用
 vim.keybinds.gmap("n", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
@@ -104,6 +130,7 @@ vim.keybinds.gmap("n", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 
 -------------------------------
 -- 由 nvim-hlslens 插件提供
+-- 直接搜索光标下的字符或者单词
 
 vim.keybinds.gmap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
@@ -125,6 +152,7 @@ vim.keybinds.gmap("n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<CR>", vi
 -- cs, 改变包裹符号
 -- vs, v选中需要包裹的字符, s开始surroud,最后输入(
 -- ds, 删除包裹符号
+
 
 -------------------------------
 -- 由 nvim-tree 插件提供
@@ -193,51 +221,27 @@ vim.keybinds.gmap("n", "gs", ":Switch<CR>", vim.keybinds.opts)
 
 -----------------------------------
 -- 由插件telescope提供
+-- lsp插件,工作目录文件搜索
 
--- ctrl + c: 退出搜索
 -- ctrl + n: 下一个
--- <CR>	Confirm selection
--- <C-x>	Go to file selection as a split
--- <C-v>	Go to file selection as a vsplit
+-- <CR>     确认选择并跳转
+-- <C-x>	确认选择并水平打开这个文件
+-- <C-v>	确认选择并垂直打开这个文件
 -- <C-t>	Go to a file in a new tab
 -- ?	Show mappings for picker actions (normal mode)
--- <C-c>	Close telescope
--- <Esc>	Close telescope (in normal mode)
--- <Tab>	Toggle selection and move to next selection
+-- <C-c>    关闭telescope搜索
+-- <Esc>	normal模式关闭搜索
+-- <Tab>	折叠搜索并跳转到下一下
 
 -- 在当前的目录快速查找文件,ff
 vim.keybinds.gmap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", vim.keybinds.opts)
+
+-- 在当前的目录下查找指定的字符,fg
 vim.keybinds.gmap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", vim.keybinds.opts)
+
+-- 搜索当前的所有的buffer
 vim.keybinds.gmap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", vim.keybinds.opts)
+
+-- 搜索命令的帮助
 vim.keybinds.gmap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", vim.keybinds.opts)
-
-
-----------------------------------------------------------------------------------------
--- 插入模式
-----------------------------------------------------------------------------------------
-
--- 插入模下 jj 退出插入模式
-vim.keybinds.gmap("i", "jj", "<Esc>", vim.keybinds.opts)
-
--- 插入模式下的上下左右移动
-vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
-vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
-
-
-----------------------------------------------------------------------------------------
--- 可视模式
-----------------------------------------------------------------------------------------
-
--- 用 H 和 L 代替 ^ 与 $
-vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
-vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
-
-
-
-----------------------------------------------------------------------------------------
--- 命令模式
-----------------------------------------------------------------------------------------
-
 

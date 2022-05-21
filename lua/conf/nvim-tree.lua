@@ -1,5 +1,10 @@
 -- 文档树
 
+-- 自定义按键,按大写o, 则打开文件但是不退出tree
+-- local function open_without_exit_tree(node) {
+--     print(node.absolute_path)
+-- }
+
 -- https://github.com/kyazdani42/nvim-tree.lua
 require("nvim-tree").setup(
     {
@@ -31,7 +36,15 @@ require("nvim-tree").setup(
             enable = true,
             ignore = true,
             timeout = 500
-        }
+        },
+        mappings = {
+            custom_only = false,
+            -- 键盘映射
+            list = {
+                -- user mappings go here
+                { key = {"O"}, action = "open_without_exit_tree" },
+        },
+    },
     }
 )
 -- 默认图标，可自行修改
