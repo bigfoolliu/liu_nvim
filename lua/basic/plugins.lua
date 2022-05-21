@@ -42,6 +42,14 @@ packer.startup(
                 end
             }
 
+            -- 注释插件
+            use {
+                'numToStr/Comment.nvim',
+                config = function()
+                    require("conf.comment")
+                end
+            }
+
             -- nvim-tree文档树
             use {
                "kyazdani42/nvim-tree.lua",
@@ -72,6 +80,14 @@ packer.startup(
             --         require("conf.onedark")
             --     end
             -- }
+
+            -- 显示滚动条
+            use {
+                "petertriho/nvim-scrollbar",
+                config = function()
+                    require("conf.nvim-scrollbar")
+                end
+            }
 
             -- 支持 LSP 状态的 buffer 栏
             use {
@@ -242,3 +258,4 @@ vim.cmd(
 -- 应用主题
 vim.cmd([[colorscheme catppuccin]])
 -- vim.cmd([[colorscheme onedark]])
+

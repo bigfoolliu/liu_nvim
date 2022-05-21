@@ -10,8 +10,8 @@ vim.g.mapleader = ","
 
 -- 默认的键位设置函数太长了，所以这里将它们重新引用一下
 vim.keybinds = {
-    gmap = vim.api.nvim_set_keymap,
-    bmap = vim.api.nvim_buf_set_keymap,
+    gmap = vim.api.nvim_set_keymap,  -- 在全局生效
+    bmap = vim.api.nvim_buf_set_keymap,  -- 在缓冲区生效
     dgmap = vim.api.nvim_del_keymap,
     dbmap = vim.api.nvim_buf_del_keymap,
     opts = {noremap = true, silent = true}
@@ -142,6 +142,18 @@ vim.keybinds.gmap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", vim.ke
 -- 由 todo-comments 插件提供
 -- 查找 TODO 标签,ft
 vim.keybinds.gmap("n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<CR>", vim.keybinds.opts)
+
+
+-------------------------------
+-- 由 Comments 插件提供
+-- 根据文件类型来注释
+
+-- gcc, 注释/取消注释当前行
+-- 4gcc, 给接下来的4行注释
+
+-- gbc, 进行块注释,可以选中需要注释的文本,然后统一注释
+-- gco, 给下面的一行注释
+-- gcA, 在文件的末尾添加注释
 
 
 -------------------------------

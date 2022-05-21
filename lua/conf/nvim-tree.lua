@@ -37,14 +37,14 @@ require("nvim-tree").setup(
             ignore = true,
             timeout = 500
         },
-        mappings = {
-            custom_only = false,
-            -- 键盘映射
-            list = {
-                -- user mappings go here
-                { key = {"O"}, action = "open_without_exit_tree" },
-        },
-    },
+       --  mappings = {
+       --      custom_only = false,
+       --      -- 键盘映射
+       --      list = {
+       --          -- user mappings go here
+       --          { key = {"O"}, action = "open_without_exit_tree" }
+       --      }
+       --  },
     }
 )
 -- 默认图标，可自行修改
@@ -73,3 +73,4 @@ vim.g.nvim_tree_icons = {
         symlink_open = ""
     }
 }
+
