@@ -4,7 +4,7 @@
 
 ## 1.参考内容以及帮助
 
-- 参考文章: [知乎:neovim IDE 搭建系列](https://zhuanlan.zhihu.com/p/469355805)
+- [知乎:neovim IDE 搭建系列](https://zhuanlan.zhihu.com/p/469355805)
 - [在 neovim 中使用 Lua](https://github.com/glepnir/nvim-lua-guide-zh)
 - [neovim官方帮助文档](https://neovim.io/doc/user/)
 - [参考github](https://github.com/theniceboy/nvim/blob/master/README_cn.md)
@@ -15,31 +15,30 @@
 
 相关的主要目录:
 
-- /Users/liu/.config/nvim 配置的目录
-- /Users/liu/Desktop/liu/tools/nvim-osx64 执行文件的目录
-- /Users/liu/.local/share/nvim/site/pack/packer/start 插件安装目录
-- /Users/liu/.local/share/nvim 插件等的目录
-
+- ~/.config/nvim 配置的目录
+- ~/Desktop/liu/tools/nvim-osx64 执行文件的目录
+- ~/.local/share/nvim/site/pack/packer/start 插件安装目录
+- ~/.local/share/nvim 插件等的目录
 
 nvim目录文件介绍:
 
 目录说明：
 
-ftplugin：存放不同文件类型的缩进规则文件
-lint：存放各种语言的代码检查规范配置文件，如 pylint 等
-basic：存放基本配置项文件
-conf：存放插件相关配置文件
-dap：存放 DAP 相关配置文件
-lsp：存放 LSP 相关配置文件
-snippet：存放代码片段相关文件
+- ftplugin：存放不同文件类型的缩进规则文件
+- lint：存放各种语言的代码检查规范配置文件，如 pylint 等
+- basic：存放基本配置项文件
+- conf：存放插件相关配置文件
+- dap：存放 DAP 相关配置文件
+- lsp：存放 LSP 相关配置文件
+- snippet：存放代码片段相关文件
 
 文件说明：
 
-init.lua：配置入口文件
-config.lua：存放用户自定义配置的文件
-keybinds.lua：存放键位绑定的文件
-plugins.lua：存放依赖插件的文件
-settings.lua：存放 neovim 基本配置项的文件
+- init.lua：配置入口文件
+- config.lua：存放用户自定义配置的文件
+- keybinds.lua：存放键位绑定的文件
+- plugins.lua：存放依赖插件的文件
+- settings.lua：存放 neovim 基本配置项的文件
 
 
 ## 帮助说明
