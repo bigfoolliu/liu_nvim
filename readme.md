@@ -44,8 +44,7 @@ nvim目录文件介绍:
 - plugins.lua：存放依赖插件的文件
 - settings.lua：存放 neovim 基本配置项的文件
 
-
-## 帮助说明
+## 4.帮助说明
 
 packer:
 
@@ -127,3 +126,4 @@ packer:
 --     }
 -- )
 ```
+
