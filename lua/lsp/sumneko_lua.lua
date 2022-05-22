@@ -1,4 +1,5 @@
 -- lua lsp配置
+-- lua语言的语法lint配置
 
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")

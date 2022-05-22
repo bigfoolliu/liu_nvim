@@ -1,0 +1,19 @@
+{
+  "header": {
+		"prefix": "liu",
+    "body": [
+			"/*",
+			" * Author: bigfoolliu",
+			" * Description: $1",
+			" */"
+		],
+		"description": "输出头信息"
+  },
+  "include stdio.h": {
+		"prefix": "std",
+		"body": [
+			"#include <stdio.h>$1"
+		],
+	"description": "引入stdio.h头文件"
+	}
+}

@@ -1,4 +1,5 @@
--- lsp
+-- lsp-config配置
+-- 他能够修改一些默认的代码诊断样式
 
 -- https://github.com/neovim/nvim-lspconfig
 -- 更多样式定制，参见：https://github.com/neovim/nvim-lspconfig/wiki/UI-Customization

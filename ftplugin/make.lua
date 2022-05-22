@@ -1,4 +1,4 @@
--- json语言缩进规则
+-- Makefile语言缩进规则
 
 -- 是否将 tab 替换为 space
 vim.bo.expandtab = false

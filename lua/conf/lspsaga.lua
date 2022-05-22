@@ -1,4 +1,5 @@
 -- lsp
+-- 用来修改lsp的一些样式
 
 -- https://github.com/tami5/lspsaga.nvim
 require("lspsaga").setup(

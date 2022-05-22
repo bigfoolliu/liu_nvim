@@ -1,4 +1,5 @@
 -- lsp
+-- 下载语言服务器
 
 -- https://github.com/williamboman/nvim-lsp-installer
 

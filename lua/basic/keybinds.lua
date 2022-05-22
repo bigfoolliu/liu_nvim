@@ -203,6 +203,13 @@ vim.keybinds.gmap("n", "<leader>ft", "<cmd>TodoTelescope theme=dropdown<CR>", vi
 
 
 -------------------------------
+-- 由 neoformat 插件提供
+
+-- 按,cb 自动格式化代码
+vim.keybinds.gmap("n", "<leader>cf", "<cmd>Neoformat<CR>", vim.keybinds.opts)
+
+
+-------------------------------
 -- 由 nvim-tree 插件提供
 -- 光标在tree中的时候,默认按键
 
