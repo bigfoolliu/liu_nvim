@@ -261,7 +261,7 @@ vim.keybinds.gmap("n", "<leader>1", "<cmd>NvimTreeToggle<CR>", vim.keybinds.opts
 -- 按 alt + h/j/k/l 来切换窗口
 -- vim.keybinds.gmap("n", "<C-S>h", "<C-w>h", vim.keybinds.opts)
 
--- 按 leader fc 在文件树中找到当前以打开文件的位置,此时不必
+-- 按 leader fc 在文件树中找到当前以打开文件的位置,快捷记忆为: find current
 vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.opts)
 
 -- 按ctrl + w + w在目录树和窗口之间切换
