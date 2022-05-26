@@ -44,9 +44,11 @@ vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
 ----------------------------------------------------------------------------------------
 -- 可视模式
 
--- 用 H 和 L 代替 ^ 与 $
+-- 用 H 和 L 代替 ^ 与 g_
+-- ^为当前行的第一个字符, 0为当前行的第一列
+-- g_为当前行的最后一个字符, $为当前行的最后一列
 vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
-vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
+vim.keybinds.gmap("v", "L", "g_", vim.keybinds.opts)
 
 
 ----------------------------------------------------------------------------------------
@@ -272,6 +274,10 @@ vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.o
 
 -- 快速取反意单词，如 true 变为 false
 vim.keybinds.gmap("n", "gs", ":Switch<CR>", vim.keybinds.opts)
+
+
+-----------------------------------
+-- 由插件vim-multiple-cursor提供
 
 
 -----------------------------------

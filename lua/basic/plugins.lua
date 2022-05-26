@@ -50,6 +50,14 @@ packer.startup(
                 end
             }
 
+            -- 多光标模式
+            use {
+                "terryma/vim-multiple-cursors",
+                config = function()
+                    require("conf.vim-multiple-cursors")
+                end
+            }
+
             -- nvim-tree文档树
             use {
                "kyazdani42/nvim-tree.lua",
