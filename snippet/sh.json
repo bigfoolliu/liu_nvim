@@ -1,0 +1,12 @@
+{
+  "header": {
+    "prefix": "liu",
+    "body": ["# Author: bigfoolliu", "# Description: ", "", "#!/bin/sh"],
+    "description": "输出头信息"
+  },
+  "comment": {
+    "prefix": "com",
+    "body": ["<<comment", "$1", "comment"],
+    "description": "引入多行注释"
+  }
+}
