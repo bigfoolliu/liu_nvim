@@ -22,6 +22,7 @@ vim.o.scrolloff = 10
 vim.o.mouse = "a"
 
 -- 是否启用系统剪切板
+-- vim的话配置 xnoremap p pgvy来让粘贴时候不更换剪贴板,可以一次复制多次粘贴
 vim.o.clipboard = "unnamedplus"
 
 -- 是否开启备份文件

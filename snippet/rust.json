@@ -1,0 +1,12 @@
+{
+  "header": {
+    "prefix": "liu",
+    "body": [
+			"/*",
+			" * Author: bigfoolliu",
+			" * Description:",
+			" */"
+		],
+    "description": "输出头信息"
+  }
+}
