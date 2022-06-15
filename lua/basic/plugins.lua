@@ -20,6 +20,13 @@ packer.startup(
                 end
             }
 
+            use {
+                "fgheng/winbar.nvim",
+                config = function()
+                    require("conf.winbar")
+                end
+            }
+
             -- 全局文件搜索
             use {
                 'nvim-telescope/telescope.nvim',
