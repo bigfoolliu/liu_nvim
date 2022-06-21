@@ -96,6 +96,8 @@ vim.keybinds.gmap("n", "<ESC>", ":nohlsearch<CR>", vim.keybinds.opts)
 -- 通过 leader cs 切换拼写检查
 vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
+-- 可以快速的插入一个换行, ,+enter
+vim.keybinds.gmap("n", "<leader><CR>", "i<CR><ESC>", vim.keybinds.opts)
 
 -----------------------------
 -- 由 bufdelete 插件所提供的方法
