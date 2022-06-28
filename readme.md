@@ -4,6 +4,8 @@
 
 ## 1.参考内容以及帮助
 
+目前使用不同的分支来管理不同的版本的nvim, 因为不同的nvim可能有一些功能不能共用.
+
 - [知乎:neovim IDE 搭建系列](https://zhuanlan.zhihu.com/p/469355805)
 - [在 neovim 中使用 Lua](https://github.com/glepnir/nvim-lua-guide-zh)
 - [neovim官方帮助文档](https://neovim.io/doc/user/)
