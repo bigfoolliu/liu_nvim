@@ -1,7 +1,7 @@
 -- lsp
 -- 用来修改lsp的一些样式
 
--- https://github.com/tami5/lspsaga.nvim
+-- https://github.com/kkharji/lspsaga.nvim
 require("lspsaga").setup(
     {
         -- 提示边框样式：round、single、double

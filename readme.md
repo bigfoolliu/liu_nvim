@@ -63,7 +63,7 @@ git clone --depth 1 https://github.com/rafamadriz/friendly-snippets
 git clone --depth 1 https://github.com/phaazon/hop.nvim
 git clone --depth 1 https://github.com/ray-x/lsp_signature.nvim
 git clone --depth 1 https://github.com/onsails/lspkind-nvim
-git clone --depth 1 https://github.com/tami5/lspsaga.nvim
+git clone --depth 1 https://github.com/kkharji/lspsaga.nvim
 git clone --depth 1 https://github.com/nvim-lualine/lualine.nvim
 git clone --depth 1 https://github.com/windwp/nvim-autopairs
 git clone --depth 1 https://github.com/hrsh7th/nvim-cmp

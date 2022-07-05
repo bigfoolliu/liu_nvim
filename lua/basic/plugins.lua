@@ -206,7 +206,7 @@ packer.startup(
 
             -- LSP UI 美化
             use {
-                "tami5/lspsaga.nvim",
+                "kkharji/lspsaga.nvim",
                 config = function()
                     require("conf.lspsaga")
                 end
