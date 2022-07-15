@@ -4,7 +4,7 @@
     "body": [
       "/*",
       " * Author: bigfoolliu",
-      " * Description: $1",
+      " * Description:$1",
       " */"
     ],
     "description": "输出头信息"
